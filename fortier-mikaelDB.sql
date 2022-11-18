@@ -133,6 +133,7 @@ CREATE TABLE feuille_aventure(
     bourse INT,
     habilete INT,
     endurance INT,
+    chapitre_actuel INT,
     FOREIGN KEY(id_livre) REFERENCES livre(id),
     FOREIGN KEY(disciplines_kai) REFERENCES item_disciplines_kai_feuille_aventure(disciplines_kai_id),
     FOREIGN KEY(armes) REFERENCES item_armes_feuille_aventure(armes_id)

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'PageRechercheChapitreUI.ui'
+# Form implementation generated from reading ui file 'PageUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -125,12 +125,33 @@ class Ui_MainWindow(object):
         self.labelFeuille_Aventure_Titre.setAlignment(QtCore.Qt.AlignCenter)
         self.labelFeuille_Aventure_Titre.setObjectName("labelFeuille_Aventure_Titre")
         self.verticalLayout_FeuilleAventure.addWidget(self.labelFeuille_Aventure_Titre)
-        self.label = QtWidgets.QLabel(self.tab_FeuilleAventure)
-        self.label.setObjectName("label")
-        self.verticalLayout_FeuilleAventure.addWidget(self.label)
+        self.label_objet = QtWidgets.QLabel(self.tab_FeuilleAventure)
+        self.label_objet.setObjectName("label_objet")
+        self.verticalLayout_FeuilleAventure.addWidget(self.label_objet)
+        self.lineEdit_objets = QtWidgets.QLineEdit(self.tab_FeuilleAventure)
+        self.lineEdit_objets.setObjectName("lineEdit_objets")
+        self.verticalLayout_FeuilleAventure.addWidget(self.lineEdit_objets)
+        self.label_repas = QtWidgets.QLabel(self.tab_FeuilleAventure)
+        self.label_repas.setObjectName("label_repas")
+        self.verticalLayout_FeuilleAventure.addWidget(self.label_repas)
+        self.lineEdit_repas = QtWidgets.QLineEdit(self.tab_FeuilleAventure)
+        self.lineEdit_repas.setObjectName("lineEdit_repas")
+        self.verticalLayout_FeuilleAventure.addWidget(self.lineEdit_repas)
+        self.label_ObjetSpeciaux = QtWidgets.QLabel(self.tab_FeuilleAventure)
+        self.label_ObjetSpeciaux.setObjectName("label_ObjetSpeciaux")
+        self.verticalLayout_FeuilleAventure.addWidget(self.label_ObjetSpeciaux)
+        self.lineEdit_objetsSpeciaux = QtWidgets.QLineEdit(self.tab_FeuilleAventure)
+        self.lineEdit_objetsSpeciaux.setObjectName("lineEdit_objetsSpeciaux")
+        self.verticalLayout_FeuilleAventure.addWidget(self.lineEdit_objetsSpeciaux)
+        self.labelArmesActuek = QtWidgets.QLabel(self.tab_FeuilleAventure)
+        self.labelArmesActuek.setObjectName("labelArmesActuek")
+        self.verticalLayout_FeuilleAventure.addWidget(self.labelArmesActuek)
         self.comboBoxArmesActuel = QtWidgets.QComboBox(self.tab_FeuilleAventure)
         self.comboBoxArmesActuel.setObjectName("comboBoxArmesActuel")
         self.verticalLayout_FeuilleAventure.addWidget(self.comboBoxArmesActuel)
+        self.labelDisciplinesKaiActuel = QtWidgets.QLabel(self.tab_FeuilleAventure)
+        self.labelDisciplinesKaiActuel.setObjectName("labelDisciplinesKaiActuel")
+        self.verticalLayout_FeuilleAventure.addWidget(self.labelDisciplinesKaiActuel)
         self.comboBoxDisciplinesKaiActuel = QtWidgets.QComboBox(self.tab_FeuilleAventure)
         self.comboBoxDisciplinesKaiActuel.setObjectName("comboBoxDisciplinesKaiActuel")
         self.verticalLayout_FeuilleAventure.addWidget(self.comboBoxDisciplinesKaiActuel)
@@ -157,7 +178,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(3)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -180,7 +201,11 @@ class Ui_MainWindow(object):
         self.ButtonSupprimerSauvegarde.setText(_translate("MainWindow", "Supprimer"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_Sauvegarde), _translate("MainWindow", "Sauvegardes"))
         self.labelFeuille_Aventure_Titre.setText(_translate("MainWindow", "Vous pouvez changer vos armes et vos disciplines Kai içi !"))
-        self.label.setText(_translate("MainWindow", "Voici les équipemets équipés actuels (lors de la suppresion d\'un équipemt il faut quitter puis réouvrir l\'application pour voir le changement)"))
+        self.label_objet.setText(_translate("MainWindow", "objets"))
+        self.label_repas.setText(_translate("MainWindow", "repas"))
+        self.label_ObjetSpeciaux.setText(_translate("MainWindow", "objets spéciaux"))
+        self.labelArmesActuek.setText(_translate("MainWindow", "Armes actuels"))
+        self.labelDisciplinesKaiActuel.setText(_translate("MainWindow", "Disciplines Kai actuels"))
         self.labelArmes.setText(_translate("MainWindow", "Armes disponibles"))
         self.labelDisciplinesKai.setText(_translate("MainWindow", "Disciplines Kai disponibles"))
         self.ButtonAjouterFeuilleAventure.setText(_translate("MainWindow", "Ajouter"))

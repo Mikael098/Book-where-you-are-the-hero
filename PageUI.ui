@@ -21,7 +21,7 @@
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sélection livres&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_SelectionLivre">
        <attribute name="title">
@@ -248,14 +248,51 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label">
+           <widget class="QLabel" name="label_objet">
             <property name="text">
-             <string>Voici les équipemets équipés actuels (lors de la suppresion d'un équipemt il faut quitter puis réouvrir l'application pour voir le changement)</string>
+             <string>objets</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_objets"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_repas">
+            <property name="text">
+             <string>repas</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_repas"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_ObjetSpeciaux">
+            <property name="text">
+             <string>objets spéciaux</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_objetsSpeciaux"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelArmesActuek">
+            <property name="text">
+             <string>Armes actuels</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QComboBox" name="comboBoxArmesActuel"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelDisciplinesKaiActuel">
+            <property name="text">
+             <string>Disciplines Kai actuels</string>
+            </property>
+           </widget>
           </item>
           <item>
            <widget class="QComboBox" name="comboBoxDisciplinesKaiActuel"/>
