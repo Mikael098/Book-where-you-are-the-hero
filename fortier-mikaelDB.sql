@@ -60,6 +60,8 @@ INSERT INTO item_disciplines_kai (disciplines_kai_titre) VALUES ('Bouclier psych
 INSERT INTO item_disciplines_kai (disciplines_kai_titre) VALUES ('Puissance psychique');
 INSERT INTO item_disciplines_kai (disciplines_kai_titre) VALUES ('Communication animale');
 INSERT INTO item_disciplines_kai (disciplines_kai_titre) VALUES ('Maîtrise psychique de la matière');
+
+SELECT * FROM item_disciplines_kai;
 #-----------------------------------------------------------------------------
 
 DROP TABLE  IF EXISTS item_armes;
@@ -77,6 +79,7 @@ INSERT INTO item_armes (armes_titre) VALUES ('L\'épée');
 INSERT INTO item_armes (armes_titre) VALUES ('La hache');
 INSERT INTO item_armes (armes_titre) VALUES ('Le baton');
 INSERT INTO item_armes (armes_titre) VALUES ('Le glaive');
+
 #-----------------------------------------------------------------------------
 DROP TABLE  IF EXISTS item_disciplines_kai_feuille_aventure;
 CREATE TABLE item_disciplines_kai_feuille_aventure(
@@ -120,6 +123,7 @@ DROP TABLE  IF EXISTS feuille_aventure;
 CREATE TABLE feuille_aventure(
 	id INT PRIMARY KEY AUTO_INCREMENT,
     id_livre INT,
+    sauvegarde INT,
     disciplines_kai INT,
     disciplines_kai_notes VARCHAR(255),
     armes INT,
@@ -150,3 +154,19 @@ DELIMITER ;
 #INSERT INTO feuille_aventure (bourse) VALUES(-1);
 #SELECT * FROM feuille_aventure;
 
+#-----------------------------------------------------------------------------
+#Création de l'user
+#CREATE USER joueur IDENTIFIED BY 'qwerty';
+GRANT UPDATE ON feuille_aventure TO 'joueur';
+GRANT SELECT ON livre TO 'joueur';
+GRANT SELECT ON chapitre TO 'joueur';
+GRANT SELECT ON item_armes TO 'joueur';
+GRANT SELECT ON item_disciplines_kai TO 'joueur';
+GRANT SELECT ON feuille_aventure TO 'joueur';
+GRANT SELECT ON item_disciplines_kai_feuille_aventure TO 'joueur';
+GRANT SELECT ON item_armes_feuille_aventure TO 'joueur';
+GRANT INSERT ON feuille_aventure TO 'joueur';
+GRANT DELETE ON feuille_aventure TO 'joueur';
+
+SELECT * FROM feuille_aventure;
+SELECT armes_titre FROM item_armes INNER JOIN item_armes_feuille_aventure ON item_armes.id=item_armes_feuille_aventure.armes_id INNER JOIN feuille_aventure ON armes_id=armes WHERE item_armes.id=feuille_aventure.armes
